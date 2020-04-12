@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+
+    <div class="section-top">
+        <img src="{% static 'img/Оригинал_ 1920x1280.jpg' %}" class="img-responsive"/>
+
+    </div>
+
+    <div class="section section1">
+         <div class="container">
+            <div class="row">
+
+                {% for produkt_image in produkts_images %}
+                    {% include 'polya/product_item.html' %}
+
+                {% endfor %}
+
+            </div>
+         </div>
+    </div>
+
+{% endblock %}

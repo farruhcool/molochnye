@@ -1,0 +1,23 @@
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <div>
+                            <a href="{% url 'produkt' produkt_image.produkt.id%}">
+                            <img src="{{produkt_image.image.url}}" class="img-responsive">
+                            </a>
+                        </div>
+                        <h4>{{ produkt_image.produkt.name }}</h4>
+                        <p>
+                            {{ produkt_image.produkt.description | truncatechars_html:70 }}
+                        </p>
+                        <div>
+                            {{ produkt_image.produkt.price }} UZS
+                        </div>
+                        <div class="add-to-card-btn">
+                            <a href="{% url 'produkt' produkt_image.produkt_id%}">
+                            <button class="btn btn-success ">
+                                Добавить в корзинку
+                            </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
